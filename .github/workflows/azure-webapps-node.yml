@@ -1,0 +1,14 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Test script
+      env: 
+        TEST_SECRET: ${{ secrets.TEST_SECRET }}
+      run: |
+        bash my_script.sh $TEST_SECRET
