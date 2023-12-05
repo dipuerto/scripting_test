@@ -11,4 +11,4 @@ jobs:
       env: 
         TEST_SECRET: ${{ secrets.TEST_SECRET }}
       run: |
-        bash my_script.sh $TEST_SECRET
+        bash my_script.sh "$TEST_SECRET"
